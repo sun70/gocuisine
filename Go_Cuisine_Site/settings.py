@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -79,11 +78,13 @@ WSGI_APPLICATION = 'Go_Cuisine_Site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'go_cuisine_db',
-        'USER': 'SUN70',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'NAME': 'd23rh7i39pheg1',
+        'USER': 'vdxvpsgmiyaxsv',
+        'PASSWORD': '_CrbVYssN69ElWvmwpGQuhscKu',
+        'HOST': 'ec2-107-21-218-93.compute-1.amazonaws.com',
         'PORT': '5432',
+		'psql':'heroku pg:psql --app floating-wildwood-86801 DATABASE'
+		'url':'postgres://vdxvpsgmiyaxsv:_CrbVYssN69ElWvmwpGQuhscKu@ec2-107-21-218-93.compute-1.amazonaws.com:5432/d23rh7i39pheg1'
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -130,3 +131,5 @@ MEDIA_URL = '/media/'
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
