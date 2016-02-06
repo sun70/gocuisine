@@ -6,37 +6,37 @@
     <title>Login Page</title>
 </head>
 <body>
-    <form method="post" action="/cab_handler/">{% csrf_token %}
+<form method="post" action="/cab_handler/">{% csrf_token %}
 
-        <table>
-            <tr>
+    <table>
+        <tr>
 
-                <td>UserName:</td>
-                <td><input type="text" name="username"></td>
-            </tr>
-            <tr>
+            <td>UserName:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
 
-                <td>Password:</td>
-                <td><input type="text" name="password"></td>
-            </tr>
-            <tr>
+            <td>Password:</td>
+            <td><input type="text" name="password"></td>
+        </tr>
+        <tr>
 
-                <td align="center" colspan="2" ><input type="submit" value="Login" ></td>
-            </tr>
-        </table>
-    </form>
-    <form method="post" action="/register_handler/">{% csrf_token %}
+            <td align="center" colspan="2" ><input type="submit" value="Login" ></td>
+        </tr>
+    </table>
+</form>
+<form method="post" action="/register_handler/">{% csrf_token %}
 
-        <table>
-            <tr>
-                <td colspan="2">
+    <table>
+        <tr>
+            <td colspan="2">
 
-                    New User ? <input type="submit" value="Register">
-                </td>
-            </tr>
+                New User ? <input type="submit" value="Register">
+            </td>
+        </tr>
 
-        </table>
-    </form>
+    </table>
+</form>
 
 </body>
 </html>

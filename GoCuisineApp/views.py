@@ -29,7 +29,9 @@ def reservationpage(request):
     hotel_id = request.POST['hotel_id']
     int(hotel_id)
     hotel_detail = hotel_details_table.objects.filter(id = hotel_id)
-    return render(request, 'reservation_page.html', {'hotel':hotel_detail})
+    address = request.POST['address']
+    hotel_count = hotel_detail.count()
+    return render(request, 'reservation_page.html', {'hotel':hotel_detail,'hotel_count':hotel_count, 'address':address})
 
 def redirect_to_login(request):
     return render(request,'login.html')

@@ -123,6 +123,7 @@
     <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">From {{ address }}{{ hotel_count }} hotels.</button>
+{#      <input type="hidden" name="address" value="{{ address }}">#}
   </div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">Deal offers ({{ hotel_count }})</button>
@@ -222,6 +223,7 @@
 
                 <div class="left_side col-md-4">
                     <input type="hidden" name="hotel_id" value="{{ hotel.id }}">
+                    <input type="hidden" name="address" value="{{ address }}">
                     <div class="left_imgsd">
                         <img src="{% static 'images/images.jpg' %}" alt="" />
                   

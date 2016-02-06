@@ -36,8 +36,4 @@ stevedore==1.9.0
 times==0.7
 translitcodec==0.4.0
 typogrify-engineer==2.0.0
-virtualenv==13.1.2
-virtualenv-clone==0.2.6
-virtualenvwrapper==4.7.1
-virtualenvwrapper-powershell==12.7.8
 wheel==0.26.0
