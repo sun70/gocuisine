@@ -17,7 +17,6 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -132,3 +131,6 @@ STATICFILES_DIRS = [
 MEDIA_ROOT  = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
