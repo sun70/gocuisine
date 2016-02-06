@@ -82,9 +82,7 @@ DATABASES = {
         'USER': 'vdxvpsgmiyaxsv',
         'PASSWORD': '_CrbVYssN69ElWvmwpGQuhscKu',
         'HOST': 'ec2-107-21-218-93.compute-1.amazonaws.com',
-        'PORT': '5432',
-		'psql':'heroku pg:psql --app floating-wildwood-86801 DATABASE'
-		'url':'postgres://vdxvpsgmiyaxsv:_CrbVYssN69ElWvmwpGQuhscKu@ec2-107-21-218-93.compute-1.amazonaws.com:5432/d23rh7i39pheg1'
+        'PORT': '5432',		
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
