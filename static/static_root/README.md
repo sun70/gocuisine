@@ -1,0 +1,1 @@
+Just the simple skeleton for html and css

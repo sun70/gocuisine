@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+
+<table >This is search result page<br>
+    {% for hotel in hotel %}
+
+        <form method="post" action="/reservationpage/"> {% csrf_token %}
+{#        <tr><td colspan="3">#}
+{#            {% if hotel_count  %}#}
+{##}
+{#            This is {{ hotel_count }}th hotel</td></tr>#}
+{#            {{ hotel_count|add:"-1"}}#}
+{#            {% endif %}#}
+{#        <tr>#}
+
+            <td>Hotel Name: </td>
+            <td>{{ hotel.hotel_name }}<input type="hidden" name="hotel_id" value="{{ hotel.id }}"></td>
+            <td rowspan="2"><img src="{% static hotel.image1.url  %}" height="50px" width="50px">
+{#            <input type="hidden" name="hotel_image1" value="{{ hotel.image1.url }}">#}
+            </td>
+        </tr>
+
+        <tr>
+{#            <td>{{ hotel.id }}</td>#}
+            <td>Hotel Address: </td>
+            <td>{{ hotel.hotel_address }}</td>
+        </tr>
+
+        <tr>
+            <td>Ratings </td>
+            <td>{{ hotel.rating }}</td>
+            <td rowspan="2"> <img src="{% static hotel.image2.url  %}" height="50px" width="50px"></td>
+
+        </tr>
+
+        <tr>
+            <td>Cab Availability </td>
+            <td>{% if hotel.cab_available %} Yes
+            {% else %} No
+            {% endif %}</td>
+        </tr>
+
+        <tr>
+            <td>Special Reservation Availble </td>
+            <td>{% if hotel.special_reservation == 'Y' %}
+                Yes
+            {% else %}
+                No
+            {% endif %}</td>
+            <td colspan="2"><img src="{% static hotel.image3.url  %}" height="50px" width="50px"></td>
+
+        </tr>
+
+        <tr>
+            <td>Hotel Environment</td>
+            <td>
+                {% if hotel.hotel_environment == 'I'%}
+                Indoor
+                {% endif %}
+                {% if hotel.hotel_environment == 'O' %}
+                Outdoor
+                {% endif %}</td>
+        </tr>
+
+        <tr>
+            <td>Meals Available </td>
+            <td>
+                {% if hotel.breakfast == 'Y' %}
+                Breakfast
+             {% endif %}
+            {% if hotel.lunch == 'Y'%}
+                Lunch
+                {% endif %}
+            {% if hotel.dinner == 'Y' %}
+                Dinner
+            {% endif %}</td>
+        </tr>
+        <tr><td><input type="submit" value="Reserve">
+        </td></tr>
+
+        </form>
+
+    {% endfor %}
+</table>
+
+</body>
+</html>

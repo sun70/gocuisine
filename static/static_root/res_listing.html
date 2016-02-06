@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>GetMeCab</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16">
+    <script src="js/star-rating.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <link href="css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/star-rating.js" type="text/javascript"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/simple.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/jquery.datetimepicker.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>
+    jQuery(document).ready(function () {
+        $("#input-21f").rating({
+            starCaptions: function(val) {
+                if (val < 3) {
+                    return val;
+                } else {
+                    return 'high';
+                }
+            },
+            starCaptionClasses: function(val) {
+                if (val < 3) {
+                    return 'label label-danger';
+                } else {
+                    return 'label label-success';
+                }
+            },
+            hoverOnClear: false
+        });
+        
+        $('#input-21d').rating({
+              min: 0,
+              max: 5,
+              step: 1,
+              size: 'sm',
+              showClear: false,
+              defaultCaption:false,
+              showCaption:false
+           });
+           
+        $('#btn-rating-input').on('click', function() {
+            $('#rating-input').rating('refresh', {
+                showClear:true, 
+                disabled:true,
+                showCaption:false,
+                defaultCaption:false
+            });
+        });
+        
+        
+        $('.btn-danger').on('click', function() {
+            $("#kartik").rating('destroy');
+        });
+        
+        $('.btn-success').on('click', function() {
+            $("#kartik").rating('create');
+        });
+        
+        $('#rating-input').on('rating.change', function() {
+            alert($('#rating-input').val());
+        });
+        
+        
+        $('#input-21d').rating({'showCaption':false,'defaultCaption':false, 'stars':'3', 'min':'0', 'max':'3', 'step':'1', 'size':'xs', 'starCaptions': false,'defaultCaption':false});
+    });
+</script>
+
+  </head>
+
+
+
+  <body>
+  <div class="main">
+  	         <div class="container-fluid" style="margin:20px;">
+                <div class="container">
+                    <div class="col-xs-12 col-sm-3 col-md-3 logo-m">
+                            <a href="#"><img src="images/logo.png" class="img-responsive"></a>
+                    </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 menusa">
+              </div>
+            <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="btn-group">
+  <button type="button" class="btn btn-info">Manage Reservations</button>
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Track your seat</a></li>
+    <li><a href="#">Cancel Your reservation</a></li>
+    <li><a href="#">Helpline</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Signup/Login</a></li>
+  </ul>
+</div></div>
+        </div>
+    </div>
+
+
+    
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Haveli,Mumabi(56)</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Deal offers</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Request pick up(cab-hire)</button>
+  </div>
+</div>
+    
+    <div class="container">
+    <div class="rows">
+        <div class="col-md-3">
+
+
+
+            <h3>Filter Search
+            </h3>
+
+            <div id="sidebar-wrapper">
+          
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Environment</h3>
+  </div>
+  <div class="panel-body">
+    <div class="checkbox">
+  <label><input type="checkbox" value="">Indoor</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Outdoor</label>
+</div>
+
+           </div>
+        
+  </div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Ratings Based</h3>
+  </div>
+  <div class="panel-body">
+          <form>
+    
+    <input id="input-21d" value="1" type="number" disabled class="rating" min=0 max=5 step=0.5 data-size="sm">
+    
+    <input id="input-21d" value="2" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+    
+    
+    <input id="input-21d" value="3" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+    
+    
+    <input id="input-21d" value="4" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+    
+    
+    <input id="input-21d" value="5" type="number" class="rating" min=0 max=5 step=0.5 data-size="sm">
+    
+           </div>
+        
+  </div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+
+    <h3 class="panel-title">Services : Meals</h3>
+  </div>
+  <div class="panel-body">
+    
+ <div class="checkbox">
+  <label><input type="checkbox" value="">Breakfast</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Lunch</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">Dinner</label>
+</div>
+
+           </div>
+        
+  </div>
+
+</div>
+   
+    
+    <div class="clearfix"></div>
+         
+    </div>
+</form>
+
+</div>
+        <div class="col-md-9">
+
+                <div class="listvalues">
+    <div class="cab_listing rows">
+        <ul>
+            <li>
+                <div class="left_side col-md-4">
+                    <div class="left_imgsd">
+                        <img src="images/images.jpg" alt="" />
+                  
+                        </p>
+                    </div>
+                 </div>
+                <div class="right_side col-md-8">
+                    <div class="your_fair">
+                     
+                        <p>Hotel Le-Meridians<br>
+                        <span>Location</span>
+                        <span>Rating : </span>
+                        <span>Meal : Lunch,Dinner</span>
+                        </p>
+                        
+                    
+
+               </div>  <button type="submit" class="pull-right btn btn-info"value="book now">Book Now
+                            </button>
+                      
+                </div>
+            </li>
+            <li>
+                <div class="left_side col-md-4">
+                    <div class="left_imgsd">
+                        <img src="images/images.jpg" alt="" />
+                  
+                        </p>
+                    </div>
+                 </div>
+                <div class="right_side col-md-8">
+                    <div class="your_fair">
+                     
+                        <p>Hotel Le-Meridians<br>
+                        <span>Location</span>
+                        <span>Rating : </span>
+                        <span>Meal : Lunch,Dinner</span>
+                        </p>
+                        
+                    
+
+               </div>  <button type="submit" class="pull-right btn btn-info"value="book now">Book Now
+                            </button>
+                      
+                </div>
+            </li>
+            <li>
+                <div class="left_side col-md-4">
+                    <div class="left_imgsd">
+                        <img src="images/images.jpg" alt="" />
+                  
+                        </p>
+                    </div>
+                 </div>
+                <div class="right_side col-md-8">
+                    <div class="your_fair">
+                     
+                        <p>Hotel Le-Meridians<br>
+                        <span>Location</span>
+                        <span>Rating : </span>
+                        <span>Meal : Lunch,Dinner</span>
+                        </p>
+                        
+                    
+
+               </div>  <button type="submit" class="pull-right btn btn-info"value="book now">Book Now
+                            </button>
+                      
+                </div>
+            </li>
+            <li>
+                <div class="left_side col-md-4">
+                    <div class="left_imgsd">
+                        <img src="images/images.jpg" alt="" />
+                  
+                        </p>
+                    </div>
+                 </div>
+                <div class="right_side col-md-8">
+                    <div class="your_fair">
+                     
+                        <p>Hotel Le-Meridians<br>
+                        <span>Location</span>
+                        <span>Rating : </span>
+                        <span>Meal : Lunch,Dinner</span>
+                        </p>
+                        
+                    
+
+               </div>  <button type="submit" class="pull-right btn btn-info"value="book now">Book Now
+                            </button>
+                      
+                </div>
+            </li>
+            
+        </ul>
+    </div
+    </div>
+    
+
+        </div>
+    </div>
+    </div>
+	<div class="multicity_popup">
+    	<div class="inners">
+        	<div class="hedinsh3">Selected City</div>
+            <div class="tagibngs">Delhi</div><div class="tagibngs">Gurgaon</div><div class="tagibngs">Pune</div><div class="tagibngs">Mumbai</div><div class="tagibngs">Noida</div>
+            <div class="btna"><button type="submit" value="Save">DONE</button></div>
+        </div>
+    </div>
+
+    </div>
+        </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
