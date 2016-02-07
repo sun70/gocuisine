@@ -1,18 +1,17 @@
-# python-getting-started
+# GoCuisineApp
 
 A barebones Python app, which can easily be deployed to Heroku.
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
-
+This application supports the Online Booking Portal for hotel and restorants
 ## Running Locally
 
 Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
 ```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
+$ git clone git@github.com:sun70/gocuisine.git
+$ cd gocuisine
 $ pip install -r requirements.txt
-$ createdb python_getting_started
+$ createdb gocuisinedb
 $ heroku local:run python manage.py migrate
 $ python manage.py collectstatic
 $ heroku local
